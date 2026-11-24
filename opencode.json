@@ -1,0 +1,29 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "huawei-maas/glm-5.3",
+  "small_model": "huawei-maas/glm-5.3",
+  "provider": {
+    "huawei-maas": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Huawei Cloud MaaS",
+      "options": {
+        "baseURL": "https://api-ap-southeast-1.modelarts-maas.com/v2",
+        "apiKey": "{file:./.maas-api-key}"
+      },
+      "models": {
+        "glm-5.3": {
+          "name": "GLM-5.3 (Huawei Cloud MaaS)",
+          "reasoning": true,
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "tool_call": true,
+          "limit": {
+            "context": 1000000,
+            "output": 131072
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+# Secrets and local configuration
+.env
+.maas-api-key
+
+# Runtime artifacts (regenerate with: python -m src.setup_db)
+retail.duckdb
+query_history.jsonl
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
